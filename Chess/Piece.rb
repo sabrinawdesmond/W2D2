@@ -1,10 +1,10 @@
 class Piece
     require_relative "Board"
 
-    def initialize(color, board, position)
+    def initialize(color, board, pos)
         @color = symbol
-        @board = Board
-        @position = []
+        @board = Board.new
+        @position = pos
     end
 
     def to_s
@@ -36,6 +36,10 @@ class Piece
 end
 
 class Queen < Piece
+    def initialize(pos, symbol)
+        # row, col = pos
+        # @grid[0][3] = @symbol
+    end
     def symbol_wh
         @symbol = ♕
     end
