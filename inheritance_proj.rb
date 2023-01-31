@@ -1,5 +1,6 @@
 class Employee
   attr_reader :name, :title, :salary, :boss
+  attr_reader :boss
 
    def initialize(name, title, salary, boss = nil)
     @name = name
@@ -22,6 +23,8 @@ class Employee
 end
 
 class Manager < Employee
+  attr_reader :employees
+
   def initialize(name, title, salary, boss = nil)
     super
     @employees = []
@@ -41,5 +44,20 @@ class Manager < Employee
       @employees_salary << employee.salary
     end
     @employees_salary.sum * multiplier
+    end
+
+    protected
+
+    def total_subsalary
+
+      total_subsalary = 0
+      self.employees.each do |employee|
+        if employee.is_a?(Manager)
+          total_subsalary += employee.salary + employee.total_subsalary
+        else
+          total_subsalary += employee.salary
+        end
+      end
+      total_subsalary
     end
 end
