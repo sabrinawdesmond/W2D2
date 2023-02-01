@@ -69,7 +69,7 @@ class Board
     def move_piece(color, start_pos, end_pos)
       if valid_pos?(end_pos)
         self[end_pos] = self[start_pos]
-        self[start_pos] = nil
+        self[start_pos] = ' '
 
       else
         raise "the piece cannot move to end position"
