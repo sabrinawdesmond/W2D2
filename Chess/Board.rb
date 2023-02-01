@@ -31,6 +31,12 @@ class Board
     end
 
     def valid_pos?(pos)
+      row, col = position
+      if (row >= 0 && row  <= 7 ) && (col >= 0 && col  <= 7) 
+        true
+      end
+      false
+      raise "Position doesn't exist!!!"
     end
 
     def add_piece(piece, pos)

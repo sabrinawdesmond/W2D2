@@ -1,11 +1,9 @@
+require_relative "Piece"
 class Pawn < Piece
-    def symbol_wh
-        @symbol = ♙
+    def symbol(color)
+        @symbol = "♙".colorize(color)
     end
     
-    def symbol_blk
-        @symbol = ♟
-    end
 
     def move_dirs
         

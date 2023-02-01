@@ -1,10 +1,7 @@
+require_relative "Piece"
 class Knight < Piece
-    def symbol_wh
-        @symbol = ♘
-    end
-    
-    def symbol_blk
-        @symbol = ♞
+    def symbol(color)
+        @symbol = "♘".colorize(color)
     end
 
     def move_dirs

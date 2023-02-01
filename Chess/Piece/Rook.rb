@@ -1,12 +1,9 @@
+require_relative "Piece"
 class Rook < Piece
-    def symbol_wh
-        @symbol = ♖
+    def symbol
+        @symbol = "♖".colorize(color)
     end
     
-    def symbol_blk
-        @symbol = ♜
-    end
-
     def move_dirs
         
     end
