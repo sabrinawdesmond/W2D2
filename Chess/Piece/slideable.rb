@@ -1,23 +1,32 @@
-require_relative "Board"
+# require_relative "../Board"
+# require_relative "Piece"
 
 module Slideable
 
-    # attr_reader :HORIZONTAL_DIRS , :DIAGONAL_DIRS 
+     
     HORIZONTAL_DIRS = [
         [-1,0],
         [0,-1],
         [1,0],
         [0,1]
-].freeze 
-    end
+]
+
 
     DIAGONAL_DIRS = [
-        [-1,-1]
-        [-1,1]
-        [1,1]
+        [-1,-1],
+        [-1,1],
+        [1,1],
         [1,-1]
-].freeze
-    end
+]
+
+def horizontal_dirs 
+    HORIZONTAL_DIRS
+    
+end
+
+def diagonal_dirs 
+   DIAGONAL_DIRS
+end
 
     
 end

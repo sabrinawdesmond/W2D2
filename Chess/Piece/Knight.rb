@@ -3,7 +3,7 @@ require_relative "stepable"
 
 class Knight < Piece
     
-    include stepable
+    include Stepable
     
     def symbol(color)
         @symbol = "♘".colorize(color)

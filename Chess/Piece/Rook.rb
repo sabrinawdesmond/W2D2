@@ -2,12 +2,12 @@ require_relative "Piece"
 require_relative "slideable"
 
 class Rook < Piece
-    include slideable
+    include Slideable
     def symbol
         @symbol = "♖".colorize(color)
     end
     
     def move_dirs
-        HORIZONTAL_DIRS
+        horizontal_dirs
     end
 end

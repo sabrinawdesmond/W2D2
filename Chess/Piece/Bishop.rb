@@ -10,6 +10,6 @@ include Slideable
     
 
     def move_dirs
-        DIAGONAL_DIRS
+        diagonal_dirs
     end
 end

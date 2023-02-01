@@ -1,11 +1,15 @@
-require_relative "Piece"
-require_relative "slideable"
+require_relative "./Piece.rb"
+require_relative "./slideable.rb"
 
 class Queen < Piece
-include slideable
+include Slideable
 
     def symbol(color)
         @symbol = "♕".colorize(color)
+    end
+
+    def to_s
+        "♕"
     end
 
     
@@ -13,6 +17,6 @@ include slideable
     protected
 
     def move_dirs
-    HORIZONTAL_DIRS + DIAGONAL_DIRS    
+    horizontal_dirs + diagonal_dirs    
     end
 end
