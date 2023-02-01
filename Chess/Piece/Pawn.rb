@@ -13,9 +13,8 @@ class Pawn < Piece
     end
 
     def move_dirs
-       pawn_moves =  [[-1,0],
-        [0,-1]
-        [0,1]].freeze
+       pawn_moves =  [[-1,0]
+        ].freeze
 
         pawn_capture = [[-1,1],
         [1,1]].freeze

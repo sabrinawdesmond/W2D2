@@ -2,7 +2,7 @@ require_relative "Board"
 
 module Slideable
 
-    attr_reader :HORIZONTAL_DIRS , :DIAGONAL_DIRS
+    # attr_reader :HORIZONTAL_DIRS , :DIAGONAL_DIRS 
     HORIZONTAL_DIRS = [
         [-1,0],
         [0,-1],

@@ -4,8 +4,7 @@ class Board
   def initialize
     @grid = Array.new(8) { Array.new(8, " ") }
     @null_piece = null_piece
-    #   Queen.pos = @grid[0][3]
-    # end
+    
 
     def [](pos)
       row, col = pos

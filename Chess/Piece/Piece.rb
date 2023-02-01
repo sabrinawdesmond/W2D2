@@ -2,7 +2,7 @@ class Piece
     require_relative "Board"
 
     def initialize(color, board, pos)
-        @color = symbol
+        @color = color
         @board = Board.new
         @position = pos
     end
