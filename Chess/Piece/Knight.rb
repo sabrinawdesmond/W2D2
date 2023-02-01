@@ -9,6 +9,10 @@ class Knight < Piece
         @symbol = "♘".colorize(color)
     end
 
+    def to_s
+        "♘"
+    end
+
     def move_dirs
         knight_moves = [
         [-2,-1],

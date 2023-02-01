@@ -5,6 +5,10 @@ class King < Piece
     @symbol = "♔".colorize(color)
     end
 
+    def to_s
+        "♔"
+    end
+
     def move_dirs
     
     end

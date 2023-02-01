@@ -8,6 +8,9 @@ include Slideable
         @symbol = "♗".colorize(color)
     end
     
+    def to_s
+        "♗"
+    end
 
     def move_dirs
         diagonal_dirs

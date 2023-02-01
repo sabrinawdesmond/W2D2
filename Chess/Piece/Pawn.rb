@@ -4,6 +4,10 @@ class Pawn < Piece
         @symbol = "♙".colorize(color)
     end
 
+    def to_s
+        "♙"
+    end
+
     def at_start_row?
         
     end

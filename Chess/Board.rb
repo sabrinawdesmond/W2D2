@@ -51,7 +51,7 @@ class Board
     
     def render 
       @grid.each do |row|
-        puts row
+        puts row.join(' ')
       end
       return nil 
     end
@@ -67,22 +67,23 @@ class Board
     end
 
     def move_piece(color, start_pos, end_pos)
-      if valid_pos?(start_pos)
-        self[start_pos] = color
-      else
-        raise "there is no piece at start position"
-      end
       if valid_pos?(end_pos)
-        self[end_pos] = color
+        self[end_pos] = self[start_pos]
+        self[start_pos] = nil
+
       else
         raise "the piece cannot move to end position"
+        # if valid_pos?(start_pos)
+        # else
+        #   raise "there is no piece at start position"
+        
       end
     end
 
     def valid_pos?(pos)
-      row, col = position
-      if (row >= 0 && row  <= 7 ) && (col >= 0 && col  <= 7) 
-        true
+      row, col = pos
+      if (row >= 0 && row  <= 7 ) && (col >= 0 && col <= 7) 
+        return true
       end
       false
       raise "Position doesn't exist!!!"
