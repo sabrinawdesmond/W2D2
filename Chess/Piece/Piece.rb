@@ -1,10 +1,9 @@
 class Piece
     require_relative "Board"
 
-    def initialize(color, board, pos)
+    def initialize(color)
         @color = color
-        @board = Board.new
-        @position = pos
+        @board = self
     end
 
     def to_s
