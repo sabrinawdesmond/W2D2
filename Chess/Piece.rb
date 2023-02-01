@@ -121,7 +121,7 @@ class Pawn < Piece
 end
 
 class NullPiece < Piece
-    
+
 end
 
 
