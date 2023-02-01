@@ -1,14 +1,18 @@
 require_relative "Piece"
+require_relative "slideable"
+
 class Queen < Piece
-    def initialize(pos, symbol)
-        # row, col = pos
-        # @grid[0][3] = @symbol
-    end
+include slideable
+
     def symbol(color)
         @symbol = "♕".colorize(color)
     end
+
     
+    
+    protected
+
     def move_dirs
-        
+    HORIZONTAL_DIRS + DIAGONAL_DIRS    
     end
 end
